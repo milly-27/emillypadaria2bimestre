@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delícias Pink Delfins</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>Padaria Pink Delfins</h1>
+    <a href="../login/login.html" class="login-button">Login</a>
+  </header>
+
+  <div id="painel-adm" style="display: none;">
+    <h2>Painel Administrativo</h2>
+    <button onclick="abrirAdicionarProduto()">Adicionar Produto</button>
+    <button onclick="abrirModificarProduto()">Modificar Produto</button>
+    <button onclick="abrirExcluirProduto()">Excluir Produto</button>
+    <button onclick="abrirGerenciarCupons()">Gerenciar Cupons</button>
+  </div>
+  
+  <main class="container"> 
+    <nav class="menu">
+      <button onclick="mostrarCategoria('doces')">Doces</button>
+      <button onclick="mostrarCategoria('salgados')">Salgados</button>
+      <button onclick="mostrarCategoria('bebidas')">Bebidas</button>
+    </nav>
+
+    <section class="produtos" id="produtos">
+      <div id="doces" class="categoria"></div>
+      <div id="salgados" class="categoria" style="display:none"></div>
+      <div id="bebidas" class="categoria" style="display:none"></div>
+    </section>
+
+    <aside class="carrinho" id="carrinho">
+      <h3>Carrinho</h3>
+      <table id="lista-carrinho">
+        <thead>
+          <tr>
+            <th>Produto</th>
+            <th>Qtd</th>
+            <th>Preço</th>
+            <th>Subtotal</th>
+            <th>Ações</th>
+          </tr>
+        </thead>
+        <tbody id="corpo-carrinho"></tbody>
+      </table>
+      <p id="total">Total: R$ 0,00</p>
+      <button id="btn-proximo" onclick="irParaCupom()">Próximo</button>
+    </aside>
+
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>

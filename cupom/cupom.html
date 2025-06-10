@@ -1,0 +1,35 @@
+<!DOCTYPE html> <!-- Define o tipo do documento como HTML5 -->
+<html lang="pt-br"> <!-- Define o idioma da página como português do Brasil -->
+<head>
+  <meta charset="UTF-8" /> <!-- Define a codificação de caracteres como UTF-8 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <!-- Garante responsividade -->
+  <title>Aplicar Cupom</title> <!-- Título exibido na aba do navegador -->
+  <link rel="stylesheet" href="cupom.css" /> <!-- Link para o CSS da página -->
+</head>
+<body> <!-- Início do corpo da página -->
+
+  <!-- <main> representa o conteúdo principal da página -->
+  <main class="container"> 
+
+    <h1 class="titulo">CUPOM</h1> <!-- Título principal da página -->
+
+    <!-- <form> não está sendo usada aqui, então usamos <section> para agrupar o conteúdo relacionado ao cupom -->
+    <section class="form-cupom"> <!-- Agrupa o campo de texto e o botão de verificação do cupom -->
+      <input type="text" id="input-cupom" placeholder="Digite seu cupom aqui..." /> <!-- Campo para digitar o cupom -->
+      <button onclick="verificarCupom()">🔍</button> <!-- Botão para acionar a verificação -->
+    </section>
+
+    <p id="mensagem-cupom"></p> <!-- Parágrafo para mostrar mensagens sobre o cupom -->
+
+    <!-- <footer> usado aqui para representar as ações finais: voltar ou pagar -->
+    <footer class="botoes"> 
+      <button onclick="voltar()" class="btn-voltar">Voltar</button> <!-- Botão para voltar à tela anterior -->
+      <button onclick="pagar()" class="btn-pagar">Pagar</button> <!-- Botão para prosseguir com o pagamento -->
+    </footer>
+
+  </main>
+
+  <script src="cupom.js"></script> <!-- Importa o script JavaScript da página -->
+  <script src="../admin/server.js"></script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+body {
+  margin: 0; /* Remove a margem padrão do corpo da página */
+  background: #fef6e4; /* Define a cor de fundo da página */
+  display: flex; /* Usa Flexbox para alinhar o conteúdo */
+  justify-content: center; /* Centraliza o conteúdo horizontalmente */
+  align-items: center; /* Centraliza o conteúdo verticalmente */
+  height: 100vh; /* Define a altura do body como 100% da altura da tela */
+  font-family: 'Arial', sans-serif; /* Define a fonte usada no corpo */
+}
+
+.container {
+  text-align: center; /* Centraliza o texto dentro do container */
+  background: #fff8dc; /* Define a cor de fundo do container */
+  padding: 40px; /* Espaçamento interno de 40px em todos os lados */
+  border-radius: 20px; /* Arredonda os cantos do container */
+  box-shadow: 0 0 20px #ffa07a; /* Adiciona sombra ao redor do container */
+  width: 90%; /* Define a largura do container como 90% da tela */
+  max-width: 600px; /* Define uma largura máxima de 600px */
+  position: relative; /* Define o posicionamento relativo (para posicionar elementos filhos, se necessário) */
+}
+
+.titulo {
+  font-size: 60px; /* Tamanho da fonte do título */
+  color: #ff69b4; /* Cor rosa do texto do título */
+  margin-bottom: 30px; /* Espaçamento inferior de 30px */
+}
+
+.form-cupom {
+  display: flex; /* Usa Flexbox para organizar os elementos do formulário */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  gap: 10px; /* Espaço entre os itens do formulário */
+  margin-bottom: 20px; /* Espaçamento inferior de 20px */
+}
+
+input[type="text"] {
+  padding: 12px; /* Espaçamento interno de 12px */
+  width: 60%; /* Define a largura como 60% do contêiner pai */
+  font-size: 18px; /* Tamanho da fonte */
+  border-radius: 10px; /* Cantos arredondados */
+  border: 2px solid #ff69b4; /* Borda rosa com 2px */
+}
+
+button {
+  padding: 12px 20px; /* Espaçamento interno: 12px vertical e 20px horizontal */
+  font-size: 18px; /* Tamanho da fonte */
+  border: none; /* Remove a borda padrão */
+  border-radius: 10px; /* Cantos arredondados */
+  cursor: pointer; /* Cursor em forma de mão ao passar por cima */
+  background-color: #ffb6c1; /* Cor de fundo rosa claro */
+  transition: 0.3s; /* Animação suave de 0.3 segundos para mudanças */
+}
+
+button:hover {
+  background-color: #ff69b4; /* Muda a cor de fundo ao passar o mouse */
+  color: white; /* Muda a cor do texto para branco ao passar o mouse */
+}
+
+#mensagem-cupom {
+  font-size: 18px; /* Tamanho da fonte da mensagem */
+  color: #ff4500; /* Cor laranja avermelhada para mensagens */
+  margin-top: 10px; /* Espaçamento superior de 10px */
+}
+
+.botoes {
+  display: flex; /* Usa Flexbox para os botões */
+  justify-content: space-between; /* Distribui os botões com espaço entre eles */
+  margin-top: 40px; /* Espaçamento superior de 40px */
+}
+
+.btn-voltar {
+  background-color: #87ceeb; /* Cor azul clara para o botão voltar */
+}
+
+.btn-voltar:hover {
+  background-color: #4682b4; /* Cor azul mais escura ao passar o mouse */
+  color: white; /* Cor do texto branca ao passar o mouse */
+}
+
+.btn-pagar {
+  background-color: #32cd32; /* Cor verde para o botão pagar */
+}
+
+.btn-pagar:hover {
+  background-color: #228b22; /* Cor verde mais escura ao passar o mouse */
+  color: white; /* Cor do texto branca ao passar o mouse */
+}
+
+@media (max-width: 600px) {
+  .form-cupom {
+    flex-direction: column; /* Organiza os itens do formulário em coluna em telas pequenas */
+    gap: 15px; /* Espaçamento entre os itens aumenta para 15px */
+  }
+
+  input[type="text"] {
+    width: 100%; /* Campo de texto ocupa toda a largura disponível */
+  }
+
+  .botoes {
+    flex-direction: column; /* Organiza os botões em coluna em telas pequenas */
+    gap: 15px; /* Espaçamento entre os botões de 15px */
+  }
+}

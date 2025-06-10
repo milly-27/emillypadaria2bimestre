@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin - Padaria Pink Delfins</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <header>
+    <h1>Administração - Padaria Pink Delfins</h1>
+  </header>
+
+  <main>
+    <section class="tabs">
+      <button class="tab-button active" data-tab="produtos">Produtos</button>
+      <button class="tab-button" data-tab="cupons">Cupons</button>
+      <button class="tab-button" data-tab="cadastros">Cadastros</button>
+    </section>
+
+    <section class="action-section">
+      <label for="actionSelect">Ação:</label>
+      <select id="actionSelect">
+        <option value="add">Adicionar</option>
+        <option value="edit">Editar</option>
+        <option value="delete">Excluir</option>
+      </select>
+    </section>
+
+    <section class="search-section">
+      <input type="text" id="searchInput" placeholder="Pesquisar pelo nome..." />
+      <button id="searchBtn">Buscar</button>
+    </section>
+
+    <section class="form-section">
+      <h2 id="formTitle">Adicionar Produto</h2>
+      <form id="dataForm">
+        <input type="hidden" id="dataId" />
+
+        <div class="form-group">
+          <label for="field1" id="label1">Nome:</label>
+          <input type="text" id="field1" required />
+        </div>
+
+        <div class="form-group" id="group2">
+          <label for="field2" id="label2">Preço:</label>
+          <input type="text" id="field2" required />
+        </div>
+
+        <div class="form-group" id="group3">
+          <label for="field3" id="label3">Imagem (URL):</label>
+          <input type="text" id="field3" />
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" id="submitBtn">Salvar</button>
+          <button type="button" id="cancelBtn">Cancelar</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <address>
+      <strong>Padaria Pink Delfins</strong><br />
+      Av das Lojas, 7070<br />
+      Campo Mourão
+    </address>
+  </footer>
+
+  <script src="admin.js"></script>
+</body>
+</html>
